@@ -63,6 +63,9 @@
   .directors .eyebrow{margin-bottom:24px;}
   .directors-row{display:flex;gap:56px;flex-wrap:wrap;}
   .directors-row .name{font-family:'Newsreader',serif;font-style:italic;font-size:26px;color:var(--ink);}
+  .directors-row a.name{border-bottom:1px solid transparent;transition:border-color .2s ease;}
+  .directors-row a.name:hover{border-color:var(--accent);}
+  .advisory-board{margin-top:56px;}
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:760px){
@@ -134,6 +137,14 @@
       <div class="directors-row">
         <div class="name">Joseph Dangerfield</div>
         <div class="name">Huck Beard</div>
+      </div>
+
+      <div class="advisory-board">
+        <div class="eyebrow">Advisory Board</div>
+        <div class="directors-row">
+          <a class="name" href="https://www.lukedahn.net/Index.htm" target="_blank" rel="noopener">Luke Dahn</a>
+          <a class="name" href="https://music.uiowa.edu/people/david-gompper" target="_blank" rel="noopener">David Gompper</a>
+        </div>
       </div>
     </div>
   </section>
