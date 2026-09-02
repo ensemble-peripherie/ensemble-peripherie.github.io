@@ -45,8 +45,13 @@
   nav a:hover{color:var(--ink);}
   nav a.active{color:var(--ink);border-bottom-color:var(--accent);}
 
+  /* ---------- PRESS QUOTE ---------- */
+  .press-quote{position:relative;z-index:3;margin:64px 0 0;max-width:600px;border-left:2px solid var(--accent);padding-left:24px;}
+  .press-quote p{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(16px,1.7vw,19px);line-height:1.5;color:var(--ink-dim);margin-bottom:10px;}
+  .press-quote cite{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);font-style:normal;}
+
   /* ---------- ABOUT HERO / MISSION ---------- */
-  .about-hero{position:relative;z-index:3;padding:130px 0 0;}
+  .about-hero{position:relative;z-index:3;padding:64px 0 0;}
   .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:26px;}
   .about-hero h1{font-size:clamp(34px,5vw,56px);line-height:1.14;margin-bottom:38px;max-width:760px;}
   .about-hero .lede{max-width:660px;}
@@ -72,7 +77,8 @@
     .wrap{padding:0 24px;}
     header{padding:32px 0 0;}
     nav ul{gap:18px;}
-    .about-hero{padding:90px 0 0;}
+    .press-quote{margin-top:40px;}
+    .about-hero{padding:40px 0 0;}
     .quote-block{margin-top:54px;}
     .directors{padding:60px 0 70px;}
     .field-wrap > svg{opacity:.3;}
@@ -112,6 +118,13 @@
       </nav>
     </div>
   </header>
+
+  <section class="wrap">
+    <div class="press-quote">
+      <p>&ldquo;&hellip;ensemble: périphérie shows a maturity and skill that should serve as an inspiration to other ensembles.&rdquo;</p>
+      <cite>&mdash; Wes Flinn, Sequenza21</cite>
+    </div>
+  </section>
 
   <section class="about-hero">
     <div class="wrap">
