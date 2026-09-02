@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ensemble: périphérie</title>
+<meta name="description" content="ensemble: périphérie — a contemporary chamber music ensemble commissioning new works and championing composers on the periphery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:oklch(0.14 0.008 40);
+    --ink:oklch(0.95 0.01 60);
+    --ink-dim:oklch(0.8 0.02 60);
+    --ink-mute:oklch(0.55 0.02 60);
+    --line:oklch(0.4 0.02 60);
+    --accent:oklch(0.6 0.19 40);
+    --max:1120px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'IBM Plex Sans',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,.serif{font-family:'Newsreader',serif;font-style:italic;font-weight:400;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 40px;}
+
+  .field-wrap{position:relative;min-height:100vh;overflow:hidden;}
+  .field-wrap > svg{position:absolute;top:0;left:0;width:100%;height:100%;}
+
+  header{position:relative;z-index:3;padding:44px 0 0;}
+  header .wrap{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+  .brand{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.1em;}
+  .brand b{font-weight:500;}
+  nav ul{display:flex;gap:30px;list-style:none;flex-wrap:wrap;}
+  nav a{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim);padding-bottom:4px;border-bottom:1px solid transparent;}
+  nav a:hover{color:var(--ink);}
+  nav a.active{color:var(--ink);border-bottom-color:var(--accent);}
+
+  .hero{position:relative;z-index:3;padding:90px 0 80px;max-width:660px;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:26px;}
+  .hero h1{font-size:clamp(38px,6vw,70px);line-height:1.06;margin-bottom:30px;color:var(--ink);}
+  .hero p{font-size:17px;line-height:1.65;max-width:460px;color:var(--ink-dim);margin-bottom:40px;}
+  .cta-row{display:flex;gap:16px;flex-wrap:wrap;}
+  .btn{padding:13px 26px;font-size:14px;}
+  .btn-solid{background:var(--accent);color:var(--bg);font-weight:500;}
+  .btn-outline{border:1px solid var(--line);color:var(--ink);}
+
+  .press-quote{position:relative;z-index:3;margin:64px 0 0;max-width:600px;border-left:2px solid var(--accent);padding-left:24px;}
+  .press-quote p{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(16px,1.7vw,19px);line-height:1.5;color:var(--ink-dim);margin-bottom:10px;}
+  .press-quote cite{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);font-style:normal;}
+
+  @media (max-width:760px){
+    .wrap{padding:0 24px;}
+    header{padding:32px 0 0;}
+    nav ul{gap:18px;}
+    .hero{padding:56px 0 60px;}
+    .press-quote{margin-top:40px;}
+    .field-wrap > svg{opacity:.3;}
+  }
+</style>
+</head>
+<body>
+
+<div class="field-wrap">
+  <svg viewBox="0 0 1440 860" preserveAspectRatio="xMaxYMin slice">
+    <defs>
+      <filter id="soften" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="30" />
+      </filter>
+    </defs>
+    <g filter="url(#soften)">
+      <polygon points="1440,0 1440,860 1163,860 1034,786 1112,737 1166,677 1002,626 1156,546 1155,502 1191,410 1013,380 1137,287 1070,263 1189,187 1145,121 964,42 1186,0"
+        fill="oklch(0.4 0.1 300)" opacity="0.85" />
+      <polygon points="1440,10 1440,860 1128,841 1315,801 1249,743 1222,689 1290,643 1310,592 1183,520 1290,459 1164,390 1255,350 1282,268 1183,245 1244,166 1261,134 1119,69 1268,0"
+        fill="oklch(0.6 0.19 40)" opacity="0.9" />
+      <polygon points="1440,40 1440,860 1327,860 1309,772 1214,742 1268,639 1289,575 1375,540 1354,462 1325,402 1246,335 1378,251 1236,183 1258,144 1221,64 1308,0"
+        fill="oklch(0.8 0.17 90)" opacity="0.55" />
+    </g>
+  </svg>
+
+  <header>
+    <div class="wrap">
+      <a href="index.html" class="brand">ensemble: <b>périphérie</b></a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="artists.html">Artists</a></li>
+          <li><a href="listen.html">Listen</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <div class="press-quote">
+      <p>&ldquo;The musically unheralded and underplayed have a worthy champion.&rdquo;</p>
+      <cite>&mdash; Jeffrey Williams, New York Concert Review</cite>
+    </div>
+  </section>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Contemporary chamber music &middot; est. 2010</div>
+      <h1 class="serif">New Music, on<br>the periphery.</h1>
+      <p>ensemble: périphérie commissions bold new works and gives overlooked composers a stage at the center.</p>
+      <div class="cta-row">
+        <a href="listen.html" class="btn btn-solid">Listen</a>
+        <a href="about.html" class="btn btn-outline">About the ensemble</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  // (placeholder for future shared nav/mobile-menu script, if one becomes needed)
+</script>
+
+</body>
+</html>

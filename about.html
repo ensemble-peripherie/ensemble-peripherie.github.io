@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — ensemble: périphérie</title>
+<meta name="description" content="About ensemble: périphérie — a contemporary chamber music ensemble commissioning new works and championing composers on the periphery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:oklch(0.14 0.008 40);
+    --ink:oklch(0.95 0.01 60);
+    --ink-dim:oklch(0.8 0.02 60);
+    --ink-mute:oklch(0.55 0.02 60);
+    --line:oklch(0.4 0.02 60);
+    --accent:oklch(0.6 0.19 40);
+    --max:1120px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'IBM Plex Sans',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,.serif{font-family:'Newsreader',serif;font-style:italic;font-weight:400;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 40px;}
+
+  /* ---------- color field (runs the full length of the page) ---------- */
+  .field-wrap{position:relative;overflow:hidden;}
+  .field-wrap > svg{position:absolute;top:0;left:0;width:100%;height:100%;}
+
+  /* ---------- NAV ---------- */
+  header{position:relative;z-index:3;padding:44px 0 0;}
+  header .wrap{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+  .brand{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.1em;}
+  .brand b{font-weight:500;}
+  nav ul{display:flex;gap:30px;list-style:none;flex-wrap:wrap;}
+  nav a{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim);padding-bottom:4px;border-bottom:1px solid transparent;}
+  nav a:hover{color:var(--ink);}
+  nav a.active{color:var(--ink);border-bottom-color:var(--accent);}
+
+  /* ---------- ABOUT HERO / MISSION ---------- */
+  .about-hero{position:relative;z-index:3;padding:130px 0 0;}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:26px;}
+  .about-hero h1{font-size:clamp(34px,5vw,56px);line-height:1.14;margin-bottom:38px;max-width:760px;}
+  .about-hero .lede{max-width:660px;}
+  .about-hero .lede p{font-size:17.5px;line-height:1.75;color:var(--ink-dim);margin-bottom:22px;}
+  .about-hero .lede p:last-child{margin-bottom:0;}
+
+  /* ---------- QUOTE ---------- */
+  .quote-block{position:relative;z-index:3;margin:70px 0 0;max-width:760px;border-left:2px solid var(--accent);padding-left:28px;}
+  .quote-block p{font-family:'Newsreader',serif;font-style:italic;font-size:clamp(18px,2.2vw,22px);line-height:1.6;color:var(--ink);margin-bottom:16px;}
+  .quote-block cite{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);font-style:normal;}
+
+  /* ---------- DIRECTORS ---------- */
+  .directors{position:relative;z-index:3;padding:88px 0 100px;}
+  .directors .eyebrow{margin-bottom:24px;}
+  .directors-row{display:flex;gap:56px;flex-wrap:wrap;}
+  .directors-row .name{font-family:'Newsreader',serif;font-style:italic;font-size:26px;color:var(--ink);}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:760px){
+    .wrap{padding:0 24px;}
+    header{padding:32px 0 0;}
+    nav ul{gap:18px;}
+    .about-hero{padding:90px 0 0;}
+    .quote-block{margin-top:54px;}
+    .directors{padding:60px 0 70px;}
+    .field-wrap > svg{opacity:.3;}
+  }
+</style>
+</head>
+<body>
+
+<div class="field-wrap">
+  <svg viewBox="0 0 1440 1520" preserveAspectRatio="xMaxYMin slice">
+    <defs>
+      <filter id="soften" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="30" />
+      </filter>
+    </defs>
+    <g filter="url(#soften)">
+      <polygon points="1440,0 1440,1520 1018,1520 1034,1463 984,1338 1161,1253 1135,1173 1110,1108 1219,994 1066,921 1028,839 1007,758 1062,691 1181,594 1126,489 994,411 1084,347 992,234 1130,149 1009,111 1023,0"
+        fill="oklch(0.4 0.1 300)" opacity="0.85" />
+      <polygon points="1440,20 1440,1520 1138,1520 1211,1421 1219,1376 1227,1277 1226,1203 1241,1131 1147,1061 1169,949 1243,885 1224,802 1158,714 1181,662 1335,542 1296,458 1280,414 1198,302 1212,229 1275,171 1244,93 1261,0"
+        fill="oklch(0.6 0.19 40)" opacity="0.9" />
+      <polygon points="1440,60 1440,1520 1285,1520 1296,1397 1274,1299 1273,1210 1384,1120 1393,1051 1237,963 1384,861 1362,792 1365,690 1257,572 1380,481 1316,370 1292,281 1207,217 1303,72 1235,0"
+        fill="oklch(0.8 0.17 90)" opacity="0.55" />
+    </g>
+  </svg>
+
+  <header>
+    <div class="wrap">
+      <a href="index.html" class="brand">ensemble: <b>périphérie</b></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="artists.html">Artists</a></li>
+          <li><a href="listen.html">Listen</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="about-hero">
+    <div class="wrap">
+      <div class="eyebrow">About the ensemble</div>
+      <h1 class="serif">Music that lies<br>on the periphery.</h1>
+      <div class="lede">
+        <p>The mission of ensemble: périphérie is to promote contemporary music by presenting stimulating and inspiring concerts of chamber works, and by commissioning new works from both emerging and established composers, inviting audiences to join us in recognizing great art of our time.</p>
+        <p>Established in 2010 by composers Joseph Dangerfield and Luke Dahn, EP consists of a core group of performing artists, and many guest performers. One of the primary goals of EP is to bring greater exposure to composers and works that are underperformed and neglected&mdash;that is, music that lies on the periphery.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="quote-block">
+      <p>&ldquo;For me the only new music would be music that a composer of genius successfully created on the periphery of all the movements of our time and in the face of all current slogans and manifestos. Generally speaking, whatever the intellectual movements in force, not enough attention is paid to matters of temperament and originality&hellip;&rdquo;</p>
+      <cite>&mdash; Henri Dutilleux</cite>
+    </div>
+  </section>
+
+  <section class="directors">
+    <div class="wrap">
+      <div class="eyebrow">Artistic Directors</div>
+      <div class="directors-row">
+        <div class="name">Joseph Dangerfield</div>
+        <div class="name">Huck Beard</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
