@@ -49,15 +49,20 @@
   .artists-hero p{font-size:16.5px;line-height:1.7;color:var(--ink-dim);max-width:560px;}
 
   .artists-grid{position:relative;z-index:3;padding:76px 0 100px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px;}
+  .artist-card{display:block;}
   .artist-card .photo{width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
   .artist-card .photo.filled{background:oklch(0.24 0.03 40);border:1px solid oklch(0.34 0.03 40);}
   .artist-card .photo.filled span{font-family:'Newsreader',serif;font-style:italic;font-size:34px;color:oklch(0.55 0.03 60);}
+  .artist-card .photo.real{border:1px solid oklch(0.34 0.03 40);overflow:hidden;transition:border-color .25s ease;}
+  .artist-card .photo.real img{width:100%;height:100%;object-fit:cover;display:block;}
   .artist-card .photo.placeholder{border:1px dashed var(--line);}
   .artist-card .photo.placeholder span{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-mute);text-align:center;padding:0 16px;}
-  .artist-card .name{font-family:'Newsreader',serif;font-style:italic;font-size:19px;margin-bottom:4px;color:var(--ink);}
+  .artist-card .name{font-family:'Newsreader',serif;font-style:italic;font-size:19px;margin-bottom:4px;color:var(--ink);transition:color .25s ease;}
   .artist-card .name.placeholder{color:var(--ink-mute);}
   .artist-card .role{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);}
   .artist-card .role.placeholder{color:var(--ink-mute);}
+  a.artist-card:hover .name{color:var(--accent);}
+  a.artist-card:hover .photo.real{border-color:var(--accent);}
 
   @media (max-width:760px){
     .wrap{padding:0 24px;}
@@ -123,11 +128,11 @@
       <div class="name">Huck Beard</div>
       <div class="role">Artistic Director</div>
     </div>
-    <div class="artist-card">
-      <div class="photo placeholder"><span>[Photo]</span></div>
-      <div class="name placeholder">[Artist name]</div>
-      <div class="role placeholder">[Instrument]</div>
-    </div>
+    <a class="artist-card" href="artists/ann-duhamel.html">
+      <div class="photo real"><img src="assets/ann-duhamel.jpg" alt="Ann DuHamel seated at the piano"></div>
+      <div class="name">Ann DuHamel</div>
+      <div class="role">Piano</div>
+    </a>
     <div class="artist-card">
       <div class="photo placeholder"><span>[Photo]</span></div>
       <div class="name placeholder">[Artist name]</div>
