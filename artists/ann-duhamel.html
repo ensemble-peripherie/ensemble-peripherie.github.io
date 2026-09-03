@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ann DuHamel — ensemble: périphérie</title>
+<meta name="description" content="Ann DuHamel, pianist and McKnight Fellow, performing artist with ensemble: périphérie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:oklch(0.14 0.008 40);
+    --ink:oklch(0.95 0.01 60);
+    --ink-dim:oklch(0.8 0.02 60);
+    --ink-mute:oklch(0.55 0.02 60);
+    --line:oklch(0.4 0.02 60);
+    --accent:oklch(0.6 0.19 40);
+    --max:1120px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'IBM Plex Sans',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,.serif{font-family:'Newsreader',serif;font-style:italic;font-weight:400;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 40px;}
+
+  .field-wrap{position:relative;overflow:hidden;}
+  .field-wrap > svg{position:absolute;top:0;left:0;width:100%;height:100%;}
+
+  header{position:relative;z-index:3;padding:44px 0 0;}
+  header .wrap{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+  .brand{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.1em;}
+  .brand b{font-weight:500;}
+  nav ul{display:flex;gap:30px;list-style:none;flex-wrap:wrap;}
+  nav a{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim);padding-bottom:4px;border-bottom:1px solid transparent;}
+  nav a:hover{color:var(--ink);}
+  nav a.active{color:var(--ink);border-bottom-color:var(--accent);}
+
+  /* ---------- ARTIST HERO ---------- */
+  .artist-hero{position:relative;z-index:3;padding:140px 0 0;}
+  .breadcrumb{
+    display:inline-block;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-mute);
+    margin-bottom:26px;
+    transition:color .25s ease;
+  }
+  .breadcrumb:hover{color:var(--accent);}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;}
+  .hero-grid{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:start;}
+  .artist-hero h1{font-size:clamp(34px,5.4vw,54px);line-height:1.12;margin-bottom:16px;}
+  .artist-hero .subtitle{font-size:16.5px;line-height:1.6;color:var(--ink-dim);max-width:52ch;}
+  .artist-photo{width:260px;flex-shrink:0;aspect-ratio:4/5;border:1px solid oklch(0.34 0.03 40);overflow:hidden;}
+  .artist-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  /* ---------- BIO ---------- */
+  .bio{position:relative;z-index:3;padding:72px 0 0;}
+  .bio-body{max-width:68ch;}
+  .bio-body p{font-size:16.5px;line-height:1.85;color:var(--ink-dim);margin-bottom:24px;}
+  .bio-body p:last-child{margin-bottom:0;}
+  .bio-body em{font-style:italic;}
+  .bio-body a{color:var(--ink);border-bottom:1px solid var(--accent);transition:color .25s ease;}
+  .bio-body a:hover{color:var(--accent);}
+
+  /* ---------- DETAILS ---------- */
+  .details{position:relative;z-index:3;padding:64px 0 100px;border-top:1px solid var(--line);margin-top:64px;}
+  .details dt{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:8px;}
+  .details dd{font-size:15px;color:var(--ink-dim);}
+  .details dd a{color:var(--ink);border-bottom:1px solid var(--accent);transition:color .25s ease;}
+  .details dd a:hover{color:var(--accent);}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:760px){
+    .wrap{padding:0 24px;}
+    header{padding:32px 0 0;}
+    nav ul{gap:18px;}
+    .artist-hero{padding:90px 0 0;}
+    .hero-grid{grid-template-columns:1fr;gap:28px;}
+    .artist-photo{width:200px;}
+    .bio{padding:52px 0 0;}
+    .details{padding:48px 0 70px;margin-top:48px;}
+    .field-wrap > svg{opacity:.3;}
+  }
+</style>
+</head>
+<body>
+
+<div class="field-wrap">
+  <svg viewBox="0 0 1440 1300" preserveAspectRatio="xMaxYMin slice">
+    <defs>
+      <filter id="soften" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="30" />
+      </filter>
+    </defs>
+    <g filter="url(#soften)">
+      <polygon points="1440,0 1440,1300 1018,1300 1034,1243 984,1118 1161,1033 1135,953 1110,888 1219,774 1066,701 1028,619 1007,538 1062,471 1181,374 1126,269 994,191 1084,127 992,14 1130,0"
+        fill="oklch(0.4 0.1 300)" opacity="0.85" />
+      <polygon points="1440,20 1440,1300 1138,1300 1211,1201 1219,1156 1227,1057 1226,983 1241,911 1147,841 1169,729 1243,665 1224,582 1158,494 1181,442 1335,322 1296,238 1280,194 1198,82 1212,9 1275,0"
+        fill="oklch(0.6 0.19 40)" opacity="0.9" />
+      <polygon points="1440,60 1440,1300 1285,1300 1296,1177 1274,1079 1273,990 1384,900 1393,831 1237,743 1384,641 1362,572 1365,470 1257,352 1380,261 1316,150 1292,61 1207,0"
+        fill="oklch(0.8 0.17 90)" opacity="0.55" />
+    </g>
+  </svg>
+
+  <header>
+    <div class="wrap">
+      <a href="../index.html" class="brand">ensemble: <b>périphérie</b></a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../artists.html" class="active">Artists</a></li>
+          <li><a href="../listen.html">Listen</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="artist-hero wrap">
+    <a href="../artists.html" class="breadcrumb">← All Artists</a>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Piano</div>
+        <h1 class="serif">Ann DuHamel</h1>
+        <div class="subtitle">McKnight Fellow &middot; Professor of Music, University of Minnesota Morris</div>
+      </div>
+      <figure class="artist-photo">
+        <img src="../assets/ann-duhamel.jpg" alt="Ann DuHamel seated at the piano">
+      </figure>
+    </div>
+  </section>
+
+  <section class="bio wrap">
+    <div class="bio-body">
+      <p>Praised as poetic and &ldquo;&hellip; a delight for the ears and the soul&rdquo; (Encuentro Universitario Internacional de Saxofón, Mexico City), pianist and McKnight Fellow Ann DuHamel delights in a multi-dimensional and eclectic musical career. Her performances have spanned 22 countries and 37 of the United States, including Carnegie Weill Recital Hall.</p>
+      <p>Hailed as a &ldquo;forward thinking classical pianist&rdquo; (<a href="http://midwestrecord.com/MWR1709.html" target="_blank" rel="noopener"><em>Midwest Record</em></a>) and applauded for the &ldquo;depth of programming and playing&rdquo; (<a href="https://pianoinspires.com/article/autumn-2021-first-looks-recordings-2/" target="_blank" rel="noopener"><em>Piano Magazine</em></a>) for her debut album <a href="https://furiousartisans.com/catalog/ruckblick-new-piano-music-inspired-by-brahms/" target="_blank" rel="noopener"><em>Rückblick: New Piano Music Inspired by Brahms</em></a> (Furious Artisans, 2020), she actively champions contemporary composers, commissioning all of the works for this release. She can also be heard on <em>Tyler Kline: Orchard</em> (Neuma Records, 2022); <em>Fanfare Magazine</em> praised her performance as &ldquo;alive &hellip; [played with] aching expression.&rdquo; Tracks from <em>Rückblick</em> and <em>Orchard</em> have been featured on radio stations across the U.S.</p>
+      <p>Ann&rsquo;s project <em>Prayers for a Feverish Planet</em> responds to the climate crisis with 60+ new works from composers around the world. In the spirit of eco-artivism, the program asks urgent questions of the listener: how can we live more mindfully as global citizens? How can we use our artistic talents to make a difference? Featured in interviews on <a href="https://classical-wsmr.simplecast.com/episodes/modern-notebook-ann-duhamel-interview-aTvdbW8Q" target="_blank" rel="noopener">Modern Notebook Radio</a> (WSMR) and Minnesota Public Radio&rsquo;s <a href="https://www.mprnews.org/episode/2022/04/22/for-earth-day-university-of-minnesota-morris-professor-collects-prayers-for-a-feverish-planet" target="_blank" rel="noopener">All Things Considered with Tom Crann</a>, Ann has been awarded artist residencies at <a href="https://www.toftelake.org/2022residents" target="_blank" rel="noopener">Tofte Lake Center</a> (MN), <a href="https://www.everwoodfarmsteadfoundation.org/copy-of-2021-retreat-artists" target="_blank" rel="noopener">Everwood Farmstead Foundation</a> (WI), and <a href="https://www.portopianofest.com/" target="_blank" rel="noopener">Porto Pianofest</a> in addition to grants from the Minnesota State Arts Board, the Lake Region Arts Council, and the University of Minnesota.</p>
+      <p>Ann currently serves as Professor of Music at the <a href="https://academics.morris.umn.edu/music/music-faculty" target="_blank" rel="noopener">University of Minnesota Morris</a>, where she devotes herself to the mission of sharing high quality traditional and contemporary classical music with students and the greater community. She is a Past President of <a href="https://www.mnmusicteachers.com/" target="_blank" rel="noopener">Minnesota Music Teachers Association</a>. She earned the Doctorate of Musical Arts degree at the <a href="https://music.uiowa.edu/" target="_blank" rel="noopener">University of Iowa</a> under the tutelage of <a href="http://www.ksenia-nosikova.com/index.html" target="_blank" rel="noopener">Ksenia Nosikova</a>.</p>
+    </div>
+  </section>
+
+  <section class="details wrap">
+    <dl>
+      <dt>Website</dt>
+      <dd><a href="https://annduhamel.com/" target="_blank" rel="noopener">annduhamel.com</a></dd>
+    </dl>
+  </section>
+</div>
+
+</body>
+</html>
