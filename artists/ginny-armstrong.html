@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ginny Armstrong — ensemble: périphérie</title>
+<meta name="description" content="Ginny Armstrong, percussionist and performing artist with ensemble: périphérie.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400;1,500&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:oklch(0.14 0.008 40);
+    --ink:oklch(0.95 0.01 60);
+    --ink-dim:oklch(0.8 0.02 60);
+    --ink-mute:oklch(0.55 0.02 60);
+    --line:oklch(0.4 0.02 60);
+    --accent:oklch(0.6 0.19 40);
+    --max:1120px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'IBM Plex Sans',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,.serif{font-family:'Newsreader',serif;font-style:italic;font-weight:400;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 40px;}
+
+  .field-wrap{position:relative;overflow:hidden;}
+  .field-wrap > svg{position:absolute;top:0;left:0;width:100%;height:100%;}
+
+  header{position:relative;z-index:3;padding:44px 0 0;}
+  header .wrap{display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:20px;}
+  .brand{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.1em;}
+  .brand b{font-weight:500;}
+  nav ul{display:flex;gap:30px;list-style:none;flex-wrap:wrap;}
+  nav a{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim);padding-bottom:4px;border-bottom:1px solid transparent;}
+  nav a:hover{color:var(--ink);}
+  nav a.active{color:var(--ink);border-bottom-color:var(--accent);}
+
+  /* ---------- ARTIST HERO ---------- */
+  .artist-hero{position:relative;z-index:3;padding:140px 0 0;}
+  .breadcrumb{
+    display:inline-block;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px;letter-spacing:.08em;text-transform:uppercase;
+    color:var(--ink-mute);
+    margin-bottom:26px;
+    transition:color .25s ease;
+  }
+  .breadcrumb:hover{color:var(--accent);}
+  .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:22px;}
+  .hero-grid{display:grid;grid-template-columns:1fr auto;gap:56px;align-items:start;}
+  .artist-hero h1{font-size:clamp(34px,5.4vw,54px);line-height:1.12;margin-bottom:16px;}
+  .artist-hero .subtitle{font-size:16.5px;line-height:1.6;color:var(--ink-dim);max-width:52ch;}
+  .artist-photo{width:260px;flex-shrink:0;aspect-ratio:4/5;border:1px solid oklch(0.34 0.03 40);overflow:hidden;}
+  .artist-photo img{width:100%;height:100%;object-fit:cover;display:block;}
+
+  /* ---------- BIO ---------- */
+  .bio{position:relative;z-index:3;padding:72px 0 100px;}
+  .bio-body{max-width:68ch;}
+  .bio-body p{font-size:16.5px;line-height:1.85;color:var(--ink-dim);margin-bottom:24px;}
+  .bio-body p:last-child{margin-bottom:0;}
+  .bio-body em{font-style:italic;}
+  .bio-body a{color:var(--ink);border-bottom:1px solid var(--accent);transition:color .25s ease;}
+  .bio-body a:hover{color:var(--accent);}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:760px){
+    .wrap{padding:0 24px;}
+    header{padding:32px 0 0;}
+    nav ul{gap:18px;}
+    .artist-hero{padding:90px 0 0;}
+    .hero-grid{grid-template-columns:1fr;gap:28px;}
+    .artist-photo{width:200px;}
+    .bio{padding:52px 0 70px;}
+    .field-wrap > svg{opacity:.3;}
+  }
+</style>
+</head>
+<body>
+
+<div class="field-wrap">
+  <svg viewBox="0 0 1440 1100" preserveAspectRatio="xMaxYMin slice">
+    <defs>
+      <filter id="soften" x="-30%" y="-30%" width="160%" height="160%">
+        <feGaussianBlur stdDeviation="30" />
+      </filter>
+    </defs>
+    <g filter="url(#soften)">
+      <polygon points="1440,0 1440,1100 1018,1100 1034,1043 984,918 1161,833 1135,753 1110,688 1219,574 1066,501 1028,419 1007,338 1062,271 1181,174 1126,69 994,-9 1084,-73 992,-186 1130,0"
+        fill="oklch(0.4 0.1 300)" opacity="0.85" />
+      <polygon points="1440,20 1440,1100 1138,1100 1211,1001 1219,956 1227,857 1226,783 1241,711 1147,641 1169,529 1243,465 1224,382 1158,294 1181,242 1335,122 1296,38 1280,-6 1198,-118 1212,-191 1275,0"
+        fill="oklch(0.6 0.19 40)" opacity="0.9" />
+      <polygon points="1440,60 1440,1100 1285,1100 1296,977 1274,879 1273,790 1384,700 1393,631 1237,543 1384,441 1362,372 1365,270 1257,152 1380,61 1316,-50 1292,-139 1207,0"
+        fill="oklch(0.8 0.17 90)" opacity="0.55" />
+    </g>
+  </svg>
+
+  <header>
+    <div class="wrap">
+      <a href="../index.html" class="brand">ensemble: <b>périphérie</b></a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../artists.html" class="active">Artists</a></li>
+          <li><a href="../listen.html">Listen</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="artist-hero wrap">
+    <a href="../artists.html" class="breadcrumb">← All Artists</a>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Percussion</div>
+        <h1 class="serif">Ginny Armstrong</h1>
+        <div class="subtitle">Adjunct Assistant Professor of Percussion, University of Iowa</div>
+      </div>
+      <figure class="artist-photo">
+        <img src="../assets/ginny-armstrong.jpg" alt="Portrait of Ginny Armstrong">
+      </figure>
+    </div>
+  </section>
+
+  <section class="bio wrap">
+    <div class="bio-body">
+      <p><strong>Ginny Armstrong</strong> possesses extensive experience in percussion performance and education including concert, ethnic, and marching percussion. She received a Bachelor&rsquo;s of Music in Education and a Master&rsquo;s of Music in Performance from West Virginia University, where she was a member and featured soloist in the internationally renowned Percussion &rsquo;90 under the direction of Phil Faini. As a freelance musician in Nashville, TN, Armstrong was a founding member of the <em>Deep Grooves Steel Band</em>, led by steel drum performer and clinician Mat Britain. She also founded and directed the Nashville Percussion Institute, an independent studio featured in <em>Modern Drummer</em> magazine. Armstrong completed her Doctor of Musical Arts degree at the University of Iowa, where she performed and recorded with numerous ensembles, including the prestigious Center for New Music. Currently, she is an Adjunct Assistant Professor of Percussion at the University of Iowa. In addition, she is the Adjunct Percussion Instructor at Saint Ambrose University in Davenport, Iowa, and performs with the <em>Pandelirium Steel Band</em>.</p>
+    </div>
+  </section>
+</div>
+
+</body>
+</html>
