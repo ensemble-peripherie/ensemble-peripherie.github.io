@@ -53,6 +53,38 @@
   .track .title{font-family:'Newsreader',serif;font-style:italic;font-size:19px;color:var(--ink-mute);margin-bottom:4px;}
   .track .meta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-mute);}
 
+  /* ---------- REAL TRACK / PLAYER ---------- */
+  .track.real{border:1px solid oklch(0.34 0.03 40);align-items:flex-start;}
+  .track.real .title{color:var(--ink);font-size:20px;}
+  .track.real .title .excerpt-tag{font-size:13px;font-style:normal;color:var(--ink-mute);font-family:'IBM Plex Mono',monospace;letter-spacing:.03em;}
+  .track.real .meta{color:var(--ink-dim);text-transform:none;letter-spacing:0;font-size:13px;}
+  .track.real .meta a{color:var(--ink);border-bottom:1px solid var(--accent);transition:color .25s ease;}
+  .track.real .meta a:hover{color:var(--accent);}
+  .track-body{flex:1;min-width:0;padding-top:2px;}
+
+  .play-btn{
+    flex-shrink:0;
+    width:42px;height:42px;
+    border-radius:50%;
+    border:1px solid var(--accent);
+    background:transparent;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;
+    transition:background .25s ease;
+    padding:0;
+    margin-top:2px;
+  }
+  .play-btn:hover{background:oklch(0.6 0.19 40 / 0.14);}
+  .play-btn svg{display:block;}
+  .play-btn .icon-pause{display:none;}
+  .play-btn.playing .icon-play{display:none;}
+  .play-btn.playing .icon-pause{display:block;}
+
+  .progress-row{display:flex;align-items:center;gap:14px;margin-top:14px;}
+  .progress-bar{flex:1;height:3px;background:var(--line);position:relative;cursor:pointer;border-radius:2px;}
+  .progress-fill{position:absolute;left:0;top:0;height:100%;width:0%;background:var(--accent);border-radius:2px;}
+  .time{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.03em;color:var(--ink-mute);white-space:nowrap;}
+
   @media (max-width:760px){
     .wrap{padding:0 24px;}
     header{padding:32px 0 0;}
@@ -104,29 +136,171 @@
   </section>
 
   <section class="listen-list wrap">
-    <div class="track">
-      <svg width="34" height="34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="16" fill="none" stroke="oklch(0.5 0.02 60)" stroke-width="1.2"/><polygon points="14,11 24,17 14,23" fill="oklch(0.5 0.02 60)"/></svg>
-      <div>
-        <div class="title">[Recording title]</div>
-        <div class="meta">[Composer &middot; Year]</div>
+    <div class="track real">
+      <button class="play-btn" type="button" aria-label="Play Ask the Wind">
+        <svg class="icon-play" width="14" height="14" viewBox="0 0 14 14"><polygon points="3,1 13,7 3,13" fill="var(--accent)"/></svg>
+        <svg class="icon-pause" width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="1" width="3.5" height="12" fill="var(--accent)"/><rect x="8.5" y="1" width="3.5" height="12" fill="var(--accent)"/></svg>
+      </button>
+      <div class="track-body">
+        <div class="title">Ask the Wind</div>
+        <div class="meta"><a href="https://www.colorado.edu/music/mike-barnett" target="_blank" rel="noopener">Michael Barnett</a> &middot; 2006</div>
+        <div class="progress-row">
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <div class="time"><span class="current">0:00</span> / <span class="duration">0:00</span></div>
+        </div>
       </div>
+      <audio preload="metadata" src="assets/audio/ask-the-wind.mp3"></audio>
     </div>
-    <div class="track">
-      <svg width="34" height="34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="16" fill="none" stroke="oklch(0.5 0.02 60)" stroke-width="1.2"/><polygon points="14,11 24,17 14,23" fill="oklch(0.5 0.02 60)"/></svg>
-      <div>
-        <div class="title">[Recording title]</div>
-        <div class="meta">[Composer &middot; Year]</div>
+    <div class="track real">
+      <button class="play-btn" type="button" aria-label="Play Some Details of Hell">
+        <svg class="icon-play" width="14" height="14" viewBox="0 0 14 14"><polygon points="3,1 13,7 3,13" fill="var(--accent)"/></svg>
+        <svg class="icon-pause" width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="1" width="3.5" height="12" fill="var(--accent)"/><rect x="8.5" y="1" width="3.5" height="12" fill="var(--accent)"/></svg>
+      </button>
+      <div class="track-body">
+        <div class="title">Some Details of Hell</div>
+        <div class="meta"><a href="https://www.davidsmooke.com/" target="_blank" rel="noopener">David Smooke</a> &middot; 2006</div>
+        <div class="progress-row">
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <div class="time"><span class="current">0:00</span> / <span class="duration">0:00</span></div>
+        </div>
       </div>
+      <audio preload="metadata" src="assets/audio/some-details-of-hell.mp3"></audio>
     </div>
-    <div class="track">
-      <svg width="34" height="34" viewBox="0 0 34 34"><circle cx="17" cy="17" r="16" fill="none" stroke="oklch(0.5 0.02 60)" stroke-width="1.2"/><polygon points="14,11 24,17 14,23" fill="oklch(0.5 0.02 60)"/></svg>
-      <div>
-        <div class="title">[Recording title]</div>
-        <div class="meta">[Composer &middot; Year]</div>
+    <div class="track real">
+      <button class="play-btn" type="button" aria-label="Play Private Wilderness, movement I">
+        <svg class="icon-play" width="14" height="14" viewBox="0 0 14 14"><polygon points="3,1 13,7 3,13" fill="var(--accent)"/></svg>
+        <svg class="icon-pause" width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="1" width="3.5" height="12" fill="var(--accent)"/><rect x="8.5" y="1" width="3.5" height="12" fill="var(--accent)"/></svg>
+      </button>
+      <div class="track-body">
+        <div class="title">Private Wilderness &mdash; I</div>
+        <div class="meta"><a href="https://philippebodin.com/index.html" target="_blank" rel="noopener">Philippe Bodin</a> &middot; 1988 &middot; text by <a href="https://en.wikipedia.org/wiki/Grace_Perry" target="_blank" rel="noopener">Grace Perry</a></div>
+        <div class="progress-row">
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <div class="time"><span class="current">0:00</span> / <span class="duration">0:00</span></div>
+        </div>
       </div>
+      <audio preload="metadata" src="assets/audio/private-wilderness-i.mp3"></audio>
+    </div>
+    <div class="track real">
+      <button class="play-btn" type="button" aria-label="Play Vox Balaenae">
+        <svg class="icon-play" width="14" height="14" viewBox="0 0 14 14"><polygon points="3,1 13,7 3,13" fill="var(--accent)"/></svg>
+        <svg class="icon-pause" width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="1" width="3.5" height="12" fill="var(--accent)"/><rect x="8.5" y="1" width="3.5" height="12" fill="var(--accent)"/></svg>
+      </button>
+      <div class="track-body">
+        <div class="title">Vox Balaenae</div>
+        <div class="meta"><a href="https://en.wikipedia.org/wiki/George_Crumb" target="_blank" rel="noopener">George Crumb</a> &middot; 1971</div>
+        <div class="progress-row">
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <div class="time"><span class="current">0:00</span> / <span class="duration">0:00</span></div>
+        </div>
+      </div>
+      <audio preload="metadata" src="assets/audio/vox-balaenae.mp3"></audio>
+    </div>
+    <div class="track real">
+      <button class="play-btn" type="button" aria-label="Play The Wild, excerpt">
+        <svg class="icon-play" width="14" height="14" viewBox="0 0 14 14"><polygon points="3,1 13,7 3,13" fill="var(--accent)"/></svg>
+        <svg class="icon-pause" width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="1" width="3.5" height="12" fill="var(--accent)"/><rect x="8.5" y="1" width="3.5" height="12" fill="var(--accent)"/></svg>
+      </button>
+      <div class="track-body">
+        <div class="title">The Wild <span class="excerpt-tag">(excerpt)</span></div>
+        <div class="meta"><a href="https://josephdangerfieldmusic.com/" target="_blank" rel="noopener">Joseph Dangerfield</a></div>
+        <div class="progress-row">
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <div class="time"><span class="current">0:00</span> / <span class="duration">0:00</span></div>
+        </div>
+      </div>
+      <audio preload="metadata" src="assets/audio/the-wild-excerpt.mp3"></audio>
+    </div>
+    <div class="track real">
+      <button class="play-btn" type="button" aria-label="Play Hollows and Dells, movement I">
+        <svg class="icon-play" width="14" height="14" viewBox="0 0 14 14"><polygon points="3,1 13,7 3,13" fill="var(--accent)"/></svg>
+        <svg class="icon-pause" width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="1" width="3.5" height="12" fill="var(--accent)"/><rect x="8.5" y="1" width="3.5" height="12" fill="var(--accent)"/></svg>
+      </button>
+      <div class="track-body">
+        <div class="title">Hollows and Dells &mdash; I</div>
+        <div class="meta"><a href="https://alzand.com/" target="_blank" rel="noopener">Karim Al-Zand</a> &middot; 2013</div>
+        <div class="progress-row">
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <div class="time"><span class="current">0:00</span> / <span class="duration">0:00</span></div>
+        </div>
+      </div>
+      <audio preload="metadata" src="assets/audio/hollows-and-dells-i.mp3"></audio>
+    </div>
+    <div class="track real">
+      <button class="play-btn" type="button" aria-label="Play I Hear the Sound that has Fallen Silent">
+        <svg class="icon-play" width="14" height="14" viewBox="0 0 14 14"><polygon points="3,1 13,7 3,13" fill="var(--accent)"/></svg>
+        <svg class="icon-pause" width="14" height="14" viewBox="0 0 14 14"><rect x="2" y="1" width="3.5" height="12" fill="var(--accent)"/><rect x="8.5" y="1" width="3.5" height="12" fill="var(--accent)"/></svg>
+      </button>
+      <div class="track-body">
+        <div class="title">I Hear the Sound that has Fallen Silent</div>
+        <div class="meta"><a href="https://www.mosconsv.ru/en/person/8717" target="_blank" rel="noopener">Irina Dubkova</a> &middot; 2005</div>
+        <div class="progress-row">
+          <div class="progress-bar"><div class="progress-fill"></div></div>
+          <div class="time"><span class="current">0:00</span> / <span class="duration">0:00</span></div>
+        </div>
+      </div>
+      <audio preload="metadata" src="assets/audio/i-hear-the-sound.mp3"></audio>
     </div>
   </section>
 </div>
+
+<script>
+  document.querySelectorAll('.track.real').forEach(function(track){
+    var audio = track.querySelector('audio');
+    var btn = track.querySelector('.play-btn');
+    var fill = track.querySelector('.progress-fill');
+    var bar = track.querySelector('.progress-bar');
+    var curEl = track.querySelector('.time .current');
+    var durEl = track.querySelector('.time .duration');
+    var title = track.querySelector('.title').textContent;
+
+    function fmt(s){
+      if(!isFinite(s) || s < 0) return '0:00';
+      var m = Math.floor(s/60);
+      var sec = Math.floor(s%60).toString().padStart(2,'0');
+      return m + ':' + sec;
+    }
+
+    function updateDuration(){
+      if(isFinite(audio.duration)){ durEl.textContent = fmt(audio.duration); }
+    }
+    audio.addEventListener('loadedmetadata', updateDuration);
+    audio.addEventListener('durationchange', updateDuration);
+    updateDuration();
+    audio.addEventListener('timeupdate', function(){
+      curEl.textContent = fmt(audio.currentTime);
+      fill.style.width = (audio.duration ? (audio.currentTime/audio.duration*100) : 0) + '%';
+    });
+    audio.addEventListener('ended', function(){
+      btn.classList.remove('playing');
+      btn.setAttribute('aria-label','Play ' + title);
+    });
+
+    btn.addEventListener('click', function(){
+      if(audio.paused){
+        document.querySelectorAll('.track.real audio').forEach(function(a){
+          if(a !== audio){ a.pause(); }
+        });
+        document.querySelectorAll('.play-btn.playing').forEach(function(b){
+          if(b !== btn) b.classList.remove('playing');
+        });
+        audio.play();
+        btn.classList.add('playing');
+        btn.setAttribute('aria-label','Pause ' + title);
+      } else {
+        audio.pause();
+        btn.classList.remove('playing');
+        btn.setAttribute('aria-label','Play ' + title);
+      }
+    });
+
+    bar.addEventListener('click', function(e){
+      var rect = bar.getBoundingClientRect();
+      var pct = (e.clientX - rect.left) / rect.width;
+      if(audio.duration){ audio.currentTime = pct * audio.duration; }
+    });
+  });
+</script>
 
 </body>
 </html>
