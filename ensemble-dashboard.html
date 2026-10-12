@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Ensemble Dashboard — ensemble: périphérie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:oklch(0.14 0.008 40);
+    --panel:oklch(0.18 0.01 40);
+    --ink:oklch(0.95 0.01 60);
+    --ink-dim:oklch(0.8 0.02 60);
+    --ink-mute:oklch(0.55 0.02 60);
+    --line:oklch(0.3 0.015 40);
+    --accent:oklch(0.6 0.19 40);
+    --max:900px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'IBM Plex Sans',sans-serif;
+    background:var(--bg);
+    color:var(--ink);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{font-family:'Newsreader',serif;font-style:italic;font-weight:400;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 28px;}
+
+  /* ---------- HEADER ---------- */
+  header{border-bottom:1px solid var(--line);padding:26px 0;}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+  .brand{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.1em;color:var(--ink-dim);}
+  .brand b{font-weight:500;color:var(--ink);}
+  .back{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);transition:color .2s ease;}
+  .back:hover{color:var(--accent);}
+
+  /* ---------- INTRO ---------- */
+  .intro{padding:48px 0 8px;}
+  .intro .eyebrow{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;}
+  .intro h1{font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:38px;line-height:1.2;margin-bottom:14px;}
+  .intro p{font-size:16px;color:var(--ink-dim);max-width:62ch;}
+  .notice{
+    margin-top:22px;padding:14px 18px;
+    background:var(--panel);border-left:2px solid var(--line);
+    font-size:13.5px;line-height:1.65;color:var(--ink-mute);max-width:62ch;
+  }
+
+  /* ---------- SECTIONS ---------- */
+  .section{padding:44px 0 0;}
+  .section:last-of-type{padding-bottom:80px;}
+  .section > h2{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--ink-mute);
+    padding-bottom:10px;margin-bottom:4px;
+    border-bottom:1px solid var(--line);
+  }
+
+  /* ---------- AUDIO ROWS ---------- */
+  .track{display:flex;align-items:center;gap:18px;padding:16px 2px;border-bottom:1px solid var(--line);}
+  .track .title{font-size:15.5px;color:var(--ink);margin-bottom:3px;}
+  .track .meta{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-mute);}
+  .track-body{flex:1;min-width:0;}
+  .play-btn{
+    flex-shrink:0;width:34px;height:34px;border-radius:50%;
+    border:1px solid var(--accent);background:transparent;
+    display:flex;align-items:center;justify-content:center;
+    cursor:pointer;transition:background .2s ease;padding:0;
+  }
+  .play-btn:hover{background:oklch(0.6 0.19 40 / 0.16);}
+  .play-btn svg{display:block;}
+  .play-btn .icon-pause{display:none;}
+  .play-btn.playing .icon-play{display:none;}
+  .play-btn.playing .icon-pause{display:block;}
+  .progress-row{display:flex;align-items:center;gap:12px;margin-top:10px;}
+  .progress-bar{flex:1;height:3px;background:var(--line);position:relative;cursor:pointer;border-radius:2px;}
+  .progress-fill{position:absolute;left:0;top:0;height:100%;width:0%;background:var(--accent);border-radius:2px;}
+  .time{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--ink-mute);white-space:nowrap;}
+  .dl{
+    flex-shrink:0;font-family:'IBM Plex Mono',monospace;font-size:10.5px;
+    letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);
+    transition:color .2s ease;
+  }
+  .dl:hover{color:var(--accent);}
+
+  /* ---------- FILE ROWS ---------- */
+  .file-row{
+    display:flex;align-items:center;gap:16px;
+    padding:15px 2px;border-bottom:1px solid var(--line);
+    transition:background .15s ease;
+  }
+  a.file-row:hover{background:var(--panel);}
+  .file-icon{flex-shrink:0;width:20px;display:flex;align-items:center;justify-content:center;}
+  .file-body{flex:1;min-width:0;}
+  .file-name{font-size:15.5px;color:var(--ink);margin-bottom:2px;}
+  a.file-row:hover .file-name{color:var(--accent);}
+  .file-meta{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-mute);}
+
+  /* ---------- NOTES ---------- */
+  .note{padding:18px 0;border-bottom:1px solid var(--line);}
+  .note .note-date{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-mute);margin-bottom:7px;}
+  .note p{font-size:15.5px;line-height:1.75;color:var(--ink-dim);margin-bottom:10px;max-width:70ch;}
+  .note p:last-child{margin-bottom:0;}
+
+  /* ---------- EMPTY STATE ---------- */
+  .empty{padding:22px 0 4px;font-size:14.5px;line-height:1.7;color:var(--ink-mute);max-width:62ch;}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:620px){
+    .wrap{padding:0 20px;}
+    .intro{padding:34px 0 4px;}
+    .intro h1{font-size:30px;}
+    .section{padding:34px 0 0;}
+    .track{gap:14px;}
+    .dl{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand">ensemble: <b>périphérie</b></div>
+    <a class="back" href="index.html">Main site &rarr;</a>
+  </div>
+</header>
+
+<section class="intro wrap">
+  <h1>Ensemble Dashboard</h1>
+  <p>Scores, diction notes, and recordings for members of ensemble: périphérie. Everything here can be streamed or downloaded.</p>
+  <div class="notice">This page isn&rsquo;t linked from anywhere else on the site and is hidden from search engines &mdash; but it isn&rsquo;t password-protected. Anyone with the link can open it, so please keep it within the ensemble.</div>
+</section>
+
+<section class="section wrap">
+  <h2>Scores</h2>
+  <div class="empty">Nothing here yet. Scores and individual parts go here, each as a one-click download.</div>
+</section>
+
+<section class="section wrap">
+  <h2>Diction Notes</h2>
+  <div class="empty">Nothing here yet. Pronunciation guides, IPA transcriptions, and translations &mdash; as documents to download, or as spoken audio to play back.</div>
+</section>
+
+<section class="section wrap">
+  <h2>Recordings</h2>
+  <div class="empty">Nothing here yet. Send me audio files and I&rsquo;ll add them with an inline player and a download link.</div>
+</section>
+
+<script>
+  document.querySelectorAll('.track').forEach(function(track){
+    var audio = track.querySelector('audio');
+    if(!audio) return;
+    var btn = track.querySelector('.play-btn');
+    var fill = track.querySelector('.progress-fill');
+    var bar = track.querySelector('.progress-bar');
+    var curEl = track.querySelector('.time .current');
+    var durEl = track.querySelector('.time .duration');
+    var title = track.querySelector('.title').textContent;
+
+    function fmt(s){
+      if(!isFinite(s) || s < 0) return '0:00';
+      var m = Math.floor(s/60);
+      var sec = Math.floor(s%60).toString().padStart(2,'0');
+      return m + ':' + sec;
+    }
+    function updateDuration(){
+      if(isFinite(audio.duration) && durEl){ durEl.textContent = fmt(audio.duration); }
+    }
+    audio.addEventListener('loadedmetadata', updateDuration);
+    audio.addEventListener('durationchange', updateDuration);
+    updateDuration();
+    audio.addEventListener('timeupdate', function(){
+      if(curEl) curEl.textContent = fmt(audio.currentTime);
+      if(fill) fill.style.width = (audio.duration ? (audio.currentTime/audio.duration*100) : 0) + '%';
+    });
+    audio.addEventListener('ended', function(){
+      btn.classList.remove('playing');
+      btn.setAttribute('aria-label','Play ' + title);
+    });
+    btn.addEventListener('click', function(){
+      if(audio.paused){
+        document.querySelectorAll('.track audio').forEach(function(a){ if(a !== audio) a.pause(); });
+        document.querySelectorAll('.play-btn.playing').forEach(function(b){ if(b !== btn) b.classList.remove('playing'); });
+        audio.play();
+        btn.classList.add('playing');
+        btn.setAttribute('aria-label','Pause ' + title);
+      } else {
+        audio.pause();
+        btn.classList.remove('playing');
+        btn.setAttribute('aria-label','Play ' + title);
+      }
+    });
+    if(bar){
+      bar.addEventListener('click', function(e){
+        var rect = bar.getBoundingClientRect();
+        var pct = (e.clientX - rect.left) / rect.width;
+        if(audio.duration){ audio.currentTime = pct * audio.duration; }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
